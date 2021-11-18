@@ -45,7 +45,12 @@ it('players', function () {
   $players = [];
   foreach ($tour->players as $player) {
     $players[] = ($player->name. ' - '. $player->points);
+    // dd($player);
   }
+  $fp = tmpfile();
+  $a = $trf->dump($fp,$tour);
+
+  dd($a);
 
   dd($players);
   $this->assertIsArray($players);

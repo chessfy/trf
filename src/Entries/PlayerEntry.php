@@ -37,8 +37,8 @@ class PlayerEntry extends TrfEntry
     $str .= str_pad($player->name, 34, ' ', STR_PAD_RIGHT);
     $str .= ($player->rating != 0) ? str_pad($player->rating, 4, ' ', STR_PAD_RIGHT) : str_pad($player->rating, 4, ' ', STR_PAD_LEFT);
     $str .= str_pad($player->fed, 4, ' ', STR_PAD_LEFT);
-    $str .= ($player->id != 0) ? str_pad($player->id, 12, ' ', STR_PAD_LEFT) : str_pad($player->id, 12, ' ', STR_PAD_LEFT);
-    $str .= str_pad($player->birthdate, 5, ' ', STR_PAD_LEFT);
+    $str .= ($player->id != 0) ? str_pad($player->id, 16, ' ', STR_PAD_LEFT) : str_pad($player->id, 16, ' ', STR_PAD_LEFT);
+    $str .= str_pad($player->birthdate, 11, ' ', STR_PAD_LEFT);
     $str .= str_pad(number_format($player->points,1), 11, ' ', STR_PAD_LEFT);
     $str .= str_pad($player->rank, 5, ' ', STR_PAD_LEFT);
 
