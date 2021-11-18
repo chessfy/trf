@@ -9,11 +9,16 @@
     "homepage": "https://github.com/chessfy/trf",
     "license": "MIT",
     "authors": [
-        {
-            "name": "Alexis V.",
-            "email": "lexisvar@gmail.com",
-            "role": "Developer"
-        }
+      {
+          "name": "Chessfy",
+          "email": "chessfy@gmail.com",
+          "role": "Company"
+      },
+      {
+          "name": "Alexis V.",
+          "email": "lexisvar@gmail.com",
+          "role": "Developer"
+      }
     ],
     "require": {
         "php": "^7.4",
