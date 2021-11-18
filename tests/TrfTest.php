@@ -38,3 +38,15 @@ it('dump', function () {
   // dd($trf->dumps($tour));
   $this->assertInstanceOf(Tournament::class, $trf->load(__DIR__."/data/real.trf"));
 });
+
+it('players', function () {
+  $trf = new Trf();
+  $tour = $trf->load(__DIR__."/data/real.trf");
+  $players = [];
+  foreach ($tour->players as $player) {
+    $players[] = ($player->name. ' - '. $player->points);
+  }
+
+  dd($players);
+  $this->assertIsArray($players);
+});
