@@ -1,6 +1,6 @@
 {
     "name": "chessfy/trf",
-    "description": "This is my package trf",
+    "description": "A parser and dumper for the fide approved tournament report format: trf.",
     "keywords": [
         "Chessfy",
         "laravel",
