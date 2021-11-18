@@ -7,6 +7,7 @@ it('loads', function () {
     $trf = new Trf();
     $tour = $trf->loads('hola');
     $tour->name = 'hi';
+    
     $this->assertInstanceOf(Tournament::class, $trf->loads('hola'));
 });
 
@@ -41,17 +42,15 @@ it('dump', function () {
 
 it('players', function () {
   $trf = new Trf();
-  $tour = $trf->load(__DIR__."/data/real.trf");
+  $tour = $trf->load(__DIR__."/data/example1.trf");
   $players = [];
   foreach ($tour->players as $player) {
-    $players[] = ($player->name. ' - '. $player->points);
-    // dd($player);
+    $players[] = ($player->name. ' - '. $player->points);    
+
   }
-  $fp = tmpfile();
-  $a = $trf->dump($fp,$tour);
+  // $fp = tmpfile();
+  // $a = $trf->dumps($tour);
 
-  dd($a);
-
-  dd($players);
+  // dd($a);
   $this->assertIsArray($players);
 });
